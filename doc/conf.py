@@ -13,6 +13,8 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
+from rhos._version import get_versions #NOQA
+__version__ = get_versions()['version']
 
 
 # -- Project information -----------------------------------------------------
@@ -20,6 +22,7 @@ sys.path.insert(0, os.path.abspath('..'))
 project = 'rhos'
 copyright = '2022, Claudio Satriano'
 author = 'Claudio Satriano'
+version = __version__
 
 
 # -- General configuration ---------------------------------------------------

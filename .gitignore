@@ -3,8 +3,8 @@
 *.swp
 
 #Sphinx doc build
-doc/_build
-doc/generated
+docs/_build
+docs/generated
 
 #Temporary files
 *~

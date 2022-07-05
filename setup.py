@@ -6,6 +6,10 @@ import versioneer
 with open('README.md', 'rb') as f:
     long_descr = f.read().decode('utf-8')
 
+project_urls = {
+    'Source': 'https://github.com/claudiodsf/rhos',
+    'Documentation': 'https://rhos.readthedocs.io'
+}
 
 setup(
     name='rhos',
@@ -18,11 +22,11 @@ setup(
     long_description_content_type='text/markdown',
     author='Claudio Satriano',
     author_email='satriano@ipgp.fr',
-    url='https://github.com/claudiodsf/rhos',
+    project_urls=project_urls,
     license='GNU Lesser General Public License, Version 3 (LGPLv3)',
     platforms='OS Independent',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Console',
         'Intended Audience :: Science/Research',
         'License :: OSI Approved :: '

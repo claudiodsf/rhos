@@ -1,0 +1,6 @@
+include CHANGElOG.md
+include README.md
+include LICENSE.txt
+include CONTRIBUTORS.txt
+include versioneer.py
+include rhos/_version.py

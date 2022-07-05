@@ -1,0 +1,2 @@
+pyskel/_version.py export-subst
+rhos/_version.py export-subst

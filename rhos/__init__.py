@@ -433,13 +433,19 @@ def rec_hos(
     a = (1, -(1-C))
     b = (C, )
     mean, _ = lfilter(b, a, signal, zi=[(1-C)*mean0])
-    dev = signal**2
-    dev[1:] = (signal[1:] - mean[:-1])**2
+    if definition == 0:
+        dev = signal**2
+        dev[1:] = (signal[1:] - mean[:-1])**2
+    elif definition == 1:
+        dev = (signal - mean)**2
     var, _ = lfilter(b, a, dev, zi=[(1-C)*var0])
-    dev = signal**order
-    dev[1:] = (signal[1:] - mean[:-1])**order
     var[var == 0] = 1e-9
     var[var < var_min] = var_min
+    if definition == 0:
+        dev = signal**order
+        dev[1:] = (signal[1:] - mean[:-1])**order
+    elif definition == 1:
+        dev = (signal - mean)**order
     dev /= var**(order/2)
     hos = lfilter(b, a, dev)
     return hos

@@ -15,17 +15,8 @@ on :func:`scipy.signal.lfilter()`.
    :maxdepth: 2
    :caption: Contents:
 
-
-Functions
-*********
-
-.. automodule:: rhos
-   :members:
-
-
-References
-**********
-.. bibliography::
+   functions
+   bibliography
 
 
 Indices and tables

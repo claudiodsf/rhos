@@ -22,6 +22,7 @@ __version__ = get_versions()['version']
 project = 'rhos'
 copyright = '2022, Claudio Satriano'
 author = 'Claudio Satriano'
+release = __version__
 version = __version__
 
 

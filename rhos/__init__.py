@@ -19,7 +19,7 @@ del get_versions
 
 def rec_mean_py(signal: ArrayLike, C: float) -> np.ndarray:
     """
-    Recursive mean of a signal.
+    Recursive mean of a signal, pure Python implementation.
 
         μ[i] = C·signal[i] + (1-C)·μ[i-1]
 
@@ -44,7 +44,7 @@ def rec_mean_py(signal: ArrayLike, C: float) -> np.ndarray:
     Warning
     -------
     This is a pure python reference implementation.
-    Use :func:`recursive_mean` for a faster implementation.
+    Use :func:`rec_mean` for a faster implementation.
 
     """
     signal = np.asarray(np.atleast_1d(signal), dtype=float)
@@ -103,7 +103,7 @@ def rec_variance_py(
         C: float,
         definition: int = 0) -> np.ndarray:
     """
-    Recursive variance of a signal.
+    Recursive variance of a signal, pure Python implementation.
 
     Defined as in :cite:t:`Poiata2016` (definition 0):
 
@@ -142,7 +142,7 @@ def rec_variance_py(
     Warning
     -------
     This is a pure python reference implementation.
-    Use :func:`recursive_variance` for a faster implementation.
+    Use :func:`rec_variance` for a faster implementation.
 
     """
     signal = np.asarray(np.atleast_1d(signal), dtype=float)
@@ -241,7 +241,8 @@ def rec_hos_py(
         var_min: float = -1,
         definition: int = 0) -> np.ndarray:
     """
-    Recursive high order statistics (hos) of a signal.
+    Recursive high order statistics (hos) of a signal, pure Python
+    implementation.
 
     Defined as in `BackTrackBB <https://backtrackbb.github.io>`_
     (definition 0):
@@ -301,7 +302,7 @@ def rec_hos_py(
     Warning
     -------
     This is a pure python reference implementation.
-    Use :func:`recursive_hos` for a faster implementation.
+    Use :func:`rec_hos` for a faster implementation.
 
     """
     signal = np.asarray(np.atleast_1d(signal), dtype=float)

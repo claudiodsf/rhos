@@ -6,12 +6,12 @@ jobs:
   dist:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v5
 
     - name: Build wheel and SDist
       run: pipx run build
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v6
       with:
         path: dist/*
 
@@ -28,7 +28,7 @@ jobs:
     # if: github.event_name == 'release' && github.event.action == 'published'
 
     steps:
-    - uses: actions/download-artifact@v4
+    - uses: actions/download-artifact@v6
       with:
         name: artifact
         path: dist
